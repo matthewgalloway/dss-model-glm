@@ -8,7 +8,7 @@
     // Possibles values are: ["BINARY_CLASSIFICATION", "MULTICLASS", "REGRESSION"]
     "predictionTypes": ["REGRESSION","BINARY_CLASSIFICATION"],
     "gridSearchMode": "MANAGED",
-    "supportsSampleWeights": true,
+    "supportsSampleWeights": false,
     "acceptsSparseMatrix": false,
 
     /* params:
