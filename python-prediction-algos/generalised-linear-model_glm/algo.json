@@ -24,7 +24,7 @@
             "label": "Distribution",
             "description": "The distribution for the link function",
             "type": "SELECT",
-            "defaultValue": "tweedie",
+            "defaultValue": ["binomial"],
             "selectChoices": [
                 {
                     "value":"binomial",
@@ -61,8 +61,10 @@
         {
             "name": "link",
             "label": "Link Function",
+            "gridParam": true,
             "description":"Relates the expected value of the response to the linear predictors in the model",
-            "type": "SELECT",
+            "defaultValue": ["Logit","Log"],
+            "type": "MULTISELECT",
              "selectChoices": [
                 {
                     "value":"cdf",
@@ -128,7 +130,7 @@
             "label": "Power",
             "type": "DOUBLES",
             "allowDuplicates": false,
-            "gridParam": false,
+            "gridParam": true,
             "visibilityCondition" : "model.link == 'power'"
         }
     ]
