@@ -112,5 +112,5 @@ class GLM(BaseEstimator, ClassifierMixin):
         y_pred_final = y_pred.reshape((len(y_pred), -1))
         
         # returns p, 1-p prediction probabilities
-        return np.append(y_pred_final, 1-y_pred_final, axis=1)
+        return np.append( 1-y_pred_final,y_pred_final, axis=1)
     
