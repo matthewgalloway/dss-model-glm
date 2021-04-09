@@ -61,7 +61,7 @@
         {
             "name": "link",
             "label": "Link Function",
-            "gridParam": true,
+            "gridParam": false,
             "description":"Relates the expected value of the response to the linear predictors in the model",
             "defaultValue": ["binomial"],
             "type": "SELECT",
