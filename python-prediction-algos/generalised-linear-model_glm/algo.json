@@ -130,7 +130,7 @@
             "label": "Power",
             "type": "DOUBLES",
             "allowDuplicates": false,
-            "gridParam": true,
+            "gridParam": false,
             "visibilityCondition" : "model.link == 'power'"
         }
     ]
