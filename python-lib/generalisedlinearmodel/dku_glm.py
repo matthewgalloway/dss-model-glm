@@ -82,8 +82,8 @@ class GLM(BaseEstimator, ClassifierMixin):
         self.fitted_model = model.fit()
         
         #  adds attributes for explainability
-        self.coef_ = np.array(self.fitted_model.params).reshape(1, -1)     #removes first value which is the intercept 
-#         self.intercept_ = np.array(self.fitted_model.params[0]).reshape(-1)
+        self.coef_ = np.array(self.fitted_model.params[1:]).reshape(1, -1)     #removes first value which is the intercept 
+        self.intercept_ = np.array(self.fitted_model.params[0]).reshape(-1)
 
     
     def predict(self, X):
