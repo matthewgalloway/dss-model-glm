@@ -12,7 +12,7 @@ class GLM(BaseEstimator, ClassifierMixin):
         self.family = family
         self.alpha = alpha
         self.power = power
-        self.fit_intercept=True
+        self.fit_intercept=False
         self.intercept_scaling = 1
         self.fitted_model = None
         self.coef_= None
@@ -82,8 +82,8 @@ class GLM(BaseEstimator, ClassifierMixin):
         self.fitted_model = model.fit()
         
         #  adds attributes for explainability
-        self.coef_ = np.array(self.fitted_model.params[1:]).reshape(1, -1)     #removes first value which is the intercept 
-        self.intercept_ = np.array(self.fitted_model.params[0]).reshape(-1)
+        self.coef_ = np.array(self.fitted_model.params).reshape(1, -1)     #removes first value which is the intercept 
+#         self.intercept_ = np.array(self.fitted_model.params[0]).reshape(-1)
 
     
     def predict(self, X):
