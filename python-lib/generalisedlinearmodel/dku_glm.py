@@ -26,15 +26,15 @@ class GLM(BaseEstimator, ClassifierMixin):
         user defined link on the model training screen   
         """ 
         links_dict = {
-            'cloglog':sm.families.links.cloglog(),
-            'log':sm.families.links.log(),
-            'logit':sm.families.links.logit(),
-            'negative_binomial':sm.families.links.NegativeBinomial(self.alpha),
-            'power':sm.families.links.Power(self.power),
-            'cauchy':sm.families.links.cauchy(),  
-            'identity':sm.families.links.identity(),
-            'inverse_power':sm.families.links.inverse_power(),
-            'inverse_squared':sm.families.links.inverse_squared()
+            'cloglog': sm.families.links.cloglog(),
+            'log': sm.families.links.log(),
+            'logit': sm.families.links.logit(),
+            'negative_binomial': sm.families.links.NegativeBinomial(self.alpha),
+            'power': sm.families.links.Power(self.power),
+            'cauchy': sm.families.links.cauchy(),
+            'identity': sm.families.links.identity(),
+            'inverse_power': sm.families.links.inverse_power(),
+            'inverse_squared': sm.families.links.inverse_squared()
         }
         
         return links_dict[self.link]
