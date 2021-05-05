@@ -13,7 +13,7 @@ class GLM(BaseEstimator, ClassifierMixin):
         self.alpha = alpha
         self.power = power
         self.fitted_model = None
-        self.coef_= Nonee
+        self.coef_= None
         self.classes_ = None
 
         
