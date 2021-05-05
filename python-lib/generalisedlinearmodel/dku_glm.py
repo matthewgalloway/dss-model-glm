@@ -12,7 +12,7 @@ class GLM(BaseEstimator, ClassifierMixin):
         self.family = family
         self.alpha = alpha
         self.power = power
-        self.fit_intercept=False
+        self.fit_intercept=True
         self.intercept_scaling = 1
         self.fitted_model = None
         self.coef_= None
