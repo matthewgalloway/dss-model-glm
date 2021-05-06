@@ -199,7 +199,7 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
         # these cant be multidimensional np array like in classification
         # as scoring_base.py func compute_lm_significant hstack method will fail 
         self.coef_ = np.array(self.fitted_model.params[1:])   #removes first value which is the intercept 
-        self.intercept_ = np.array(self.fitted_model.params[0])
+        self.intercept_ = float(self.fitted_model.params[0])
 
     
     def predict(self, X):
