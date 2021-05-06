@@ -196,7 +196,7 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
         self.fitted_model = model.fit()
         
         #  adds attributes for explainability
-        # these cant be multidimensional np array like in classification
+        # intercept cant be multidimensional np array like in classification
         # as scoring_base.py func compute_lm_significant hstack method will fail 
         self.coef_ = np.array(self.fitted_model.params[1:])   #removes first value which is the intercept 
         self.intercept_ = float(self.fitted_model.params[0])
@@ -204,15 +204,14 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
     
     def predict(self, X):
         """ 
-        Returns the binary target
+        Returns the target as 1D array
         """
 
         X = sm.add_constant(X, has_constant='add')
         
         # makes predictions and converts to DSS accepted format      
         y_pred = np.array(self.fitted_model.predict(X))
-#         y_pred_final = y_pred.reshape((len(y_pred), -1))
-        
+
         return y_pred
            
 
