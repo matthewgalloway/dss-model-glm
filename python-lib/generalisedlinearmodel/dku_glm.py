@@ -211,9 +211,9 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
         
         # makes predictions and converts to DSS accepted format      
         y_pred = np.array(self.fitted_model.predict(X))
-        y_pred_final = y_pred.reshape((len(y_pred), -1))
+#         y_pred_final = y_pred.reshape((len(y_pred), -1))
         
-        return y_pred_final>0.5
+        return y_pred
            
 
     
