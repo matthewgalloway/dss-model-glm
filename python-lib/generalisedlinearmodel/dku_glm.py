@@ -197,7 +197,7 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
         
         #  adds attributes for explainability
         self.coef_ = np.array(self.fitted_model.params[1:]).reshape(1, -1)     #removes first value which is the intercept 
-        self.intercept_ = np.array(self.fitted_model.params[0]).reshape(-1)
+        self.intercept_ = np.array(self.fitted_model.params[0]).reshape(1, -1)
 
     
     def predict(self, X):
