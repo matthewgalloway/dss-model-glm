@@ -216,18 +216,5 @@ class RegressionGLM(BaseEstimator, ClassifierMixin):
         return y_pred_final>0.5
            
 
-    def predict_proba(self, X):
-        """
-        Return the prediction proba
-        """
-        #  adds a constant 
-        X = sm.add_constant(X, has_constant='add')
-        
-        # makes predictions and converts to DSS accepted format 
-        y_pred = np.array(self.fitted_model.predict(X))
-        y_pred_final = y_pred.reshape((len(y_pred), -1))
-        
-        # returns p, 1-p prediction probabilities
-        return np.append(1-y_pred_final, y_pred_final, axis=1)
     
     
