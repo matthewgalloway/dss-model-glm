@@ -1,12 +1,12 @@
 /* This file is the descriptor for the Custom Python Prediction algorithm dev-glm_glm */
 {
     "meta" : {
-        "label": "GLM-Reg",
-        "description": "GLM-Reg",
+        "label": "GLM-Regression",
+        "description": "GLM-Regression",
         "icon": "icon-wrench"
     },
     // Possibles values are: ["BINARY_CLASSIFICATION", "MULTICLASS", "REGRESSION"]
-    "predictionTypes": ["REGRESSION","BINARY_CLASSIFICATION"],
+    "predictionTypes": ["REGRESSION"],
     "gridSearchMode": "MANAGED",
     "supportsSampleWeights": true,
     "acceptsSparseMatrix": false,

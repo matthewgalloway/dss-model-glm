@@ -4,7 +4,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 import pandas as pd
 
 
-class GLM(BaseEstimator, ClassifierMixin):
+class BinaryClassificationGLM(BaseEstimator, ClassifierMixin):
     
     def __init__(self, link, family, alpha, power):
 

@@ -1,8 +1,8 @@
 /* This file is the descriptor for the Custom Python Prediction algorithm dev-glm_glm */
 {
     "meta" : {
-        "label": "GLM-Classification",
-        "description": "GLM-Classification",
+        "label": "GLM-BinaryClassification",
+        "description": "GLM-BinaryClassification",
         "icon": "icon-wrench"
     },
     // Possibles values are: ["BINARY_CLASSIFICATION", "MULTICLASS", "REGRESSION"]
